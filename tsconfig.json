@@ -13,7 +13,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "esModuleInterop": true,
+    "esModuleInterop":true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
@@ -29,7 +29,13 @@
     "paths": {
         "@app/*": ["src/app/*"],
         "@lib/*": ["src/app/lib/*"],
-        "@env/*": ["src/environments/*"]
+        "@env/*": [
+          "src/environments/*"
+        ],
+        "commons": [
+          "dist/commons/commons",
+          "dist/commons"
+        ]
     }
   },
   "angularCompilerOptions": {
