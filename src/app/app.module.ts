@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
-import { CommonsModule } from 'commons'
+import { CommonsModule, LoggerService } from 'commons'
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -16,7 +16,9 @@ import { AppComponent } from './app.component';
     FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LoggerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

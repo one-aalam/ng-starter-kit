@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { LoggerService } from 'commons'
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class AppComponent {
   title = 'ng-starter-kit';
   faCoffee = faCoffee;
+  constructor(private loggerService: LoggerService) {
+    this.loggerService.info('Info')
+  }
 }
