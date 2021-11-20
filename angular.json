@@ -35,8 +35,8 @@
               "src/assets"
             ],
             "styles": [
-              "@fontsource/work-sans",
-              "src/styles.css"
+                "src/styles.css",
+                "@fontsource/work-sans"
             ],
             "scripts": []
           },
