@@ -3,7 +3,8 @@
   "version": 1,
   "newProjectRoot": "projects",
   "cli": {
-    "packageManager": "yarn"
+    "packageManager": "yarn",
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "projects": {
     "ng-starter-kit": {
@@ -13,8 +14,8 @@
           "strict": true
         },
         "@schematics/angular:component": {
-            "inlineStyle": true,
-            "inlineTemplate": true
+          "inlineStyle": true,
+          "inlineTemplate": true
         }
       },
       "root": "",
@@ -104,6 +105,15 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
