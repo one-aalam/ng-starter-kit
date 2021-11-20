@@ -28,6 +28,9 @@
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
     "@briebug/jest-schematic": "3.1.0",
+    "@fortawesome/angular-fontawesome": "^0.10.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -46,6 +49,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
+    "cypress": "latest",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -58,8 +62,7 @@
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.2",
     "tailwindcss": "^2.2.19",
-    "typescript": "~4.4.3",
-    "cypress": "latest"
+    "typescript": "~4.4.3"
   },
   "husky": {
     "hooks": {
