@@ -66,7 +66,7 @@ which kickstarts the nuxt3 development and build server `nuxi`. Open `http://loc
 
 Check `package.json` for the full list of commands available at your disposal.
 
-## How to Setup Supabase for Nuxt Starter Kit?
+## How to Setup Supabase for Angular Starter Kit?
 If new to Supabase
 - Create account at [Supabase](https://app.supabase.io/)
 - Create a Organisation, and a project
