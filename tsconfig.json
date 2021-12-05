@@ -29,6 +29,7 @@
     "paths": {
         "@app/*": ["src/app/*"],
         "@lib/*": ["src/app/lib/*"],
+        "@modules/*": ["src/app/modules/*"],
         "@env/*": [
           "src/environments/*"
         ],

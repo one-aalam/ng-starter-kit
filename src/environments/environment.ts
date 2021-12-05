@@ -7,7 +7,11 @@ export const environment = {
     serverUrl: '/api',
     appHostUrl: '',
     defaultLanguage: 'en-US',
-    supportedLanguages: ['en-US', 'fr-FR']
+    supportedLanguages: ['en-US', 'fr-FR'],
+    supabaseClientConfig: {
+        supabaseUrl: process.env.SUPABASE_URL,
+        supabaseKey: process.env.SUPABASE_KEY,
+    },
 };
 
 /*
