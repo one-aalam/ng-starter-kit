@@ -55,6 +55,7 @@ export class AuthFormComponent implements OnInit {
   }
 
   handleSubmit(e: Event) {
+      e.preventDefault()
     const email = this.authForm.value['email']
     const password = this.authForm.value['password']
     this.submit.emit({ email, password })

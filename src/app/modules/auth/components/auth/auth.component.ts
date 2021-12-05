@@ -31,7 +31,7 @@ export class AuthComponent {
      * @param isSignIn boolean Are we seeing the signIn view of the form?
      */
     handleChange(isSignIn: boolean) {
-        this.isSignIn = isSignIn
+        if (typeof isSignIn === 'boolean') this.isSignIn = isSignIn
     }
 
     /**
@@ -42,15 +42,14 @@ export class AuthComponent {
     async handleSubmit(creds: any) {
         try {
             this.loading = true
-            const { error } = await (this.isSignIn ? this.authService.signIn(creds) : this.authService.signUp(creds))
-            if(error) {
-                return this.alertService.alert({ type: 'error', 'text': error.message })
-            }
-            if(this.isSignIn) {
-                this.alertService.alert({ type: 'success', 'text': 'logging you in...' })
-                return this.router.navigateByUrl('/profile')
-            } else {
-                this.alertService.alert({ type: 'success', 'text': 'please check your inbox to activate your account!' })
+            const { user } = await (this.isSignIn ? this.authService.signIn(creds) : this.authService.signUp(creds))
+            if (user) {
+                if(this.isSignIn) {
+                    this.alertService.alert({ type: 'success', 'text': 'logging you in...' })
+                    return this.router.navigateByUrl('/profile')
+                } else {
+                    this.alertService.alert({ type: 'success', 'text': 'please check your inbox to activate your account!' })
+                }
             }
         } catch(error) {
             // @ts-ignore
