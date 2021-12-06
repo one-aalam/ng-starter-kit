@@ -7,7 +7,7 @@ import { ALERT_EXIT_IN } from '../alert/alert.config'
   selector: 'lib-alert-list',
   template: `
     <div class="alerts flex flex-col gap-2 absolute top-4 right-6">
-        <lib-alert *ngFor="let alert of alerts" [alert]="alert"></lib-alert>
+        <lib-alert *ngFor="let alert of alerts" [alert]="alert" (close)="closeAlert"></lib-alert>
     </div>
   `,
 })
