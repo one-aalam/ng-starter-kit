@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertComponent } from './alert/alert.component';
 import { AlertListComponent } from './alert-list/alert-list.component';
 import { AlertService } from './alert.service'
@@ -14,7 +15,8 @@ import { AlertService } from './alert.service'
   imports: [
     CommonModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   exports: [
     AlertComponent,

@@ -7,4 +7,4 @@ export const ALERT_CLS_CONFIG: Record<AlertType, string> = {
 }
 
 export const ALERT_ANIM_DELAY = 200
-export const ALERT_EXIT_IN = 2000
+export const ALERT_EXIT_IN = 3000
