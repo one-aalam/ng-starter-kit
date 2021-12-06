@@ -43,7 +43,7 @@ with [Supabase](https://supabase.io/) support
 - __User Profiles__ available on `/profile` as an example for Supabase PostgREST (CRUD API)
 - __User Avatar__ which is Supbase Storage(AWS S3 backed effortless uploads) supported
 
-and a bunch of integrated and pre-made/hand-rolled(easily replace-able) components (as a library project), that you almost always end up installing/using for any non-trivial project
+and a bunch of integrated and pre-made/hand-rolled(easily replace-able) components (as a library project - `projects/commons`), that you almost always end up installing/using for any non-trivial project
 - __Button__ Button with DaisyUI style support for all the basic use cases
 - __Alert/Toast__ to notify your users of the outcome of an event - `success, `error` or `default` is supported
 - __Modal__(@ngneat/dialog) as you always come back to `em
@@ -62,9 +62,10 @@ To start the project locally, run:
 ```bash
 yarn start
 ```
-which kickstarts the nuxt3 development and build server `nuxi`. Open `http://localhost:3000` with your browser to see the result.
-
+which kickstarts the Angular development and build server. Open `http://localhost:4200` with your browser to see the result.
 Check `package.json` for the full list of commands available at your disposal.
+
+For building the library(`/projects/commons`), you have `build:lib` for compiling the code. Once compiled, the updated code can pulled by doing a `import { CommonsModule } from 'commons'` which will include all the common components like spinner, avatar, etc. in your module.
 
 ## How to Setup Supabase for Angular Starter Kit?
 If new to Supabase
