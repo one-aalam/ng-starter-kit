@@ -1,5 +1,5 @@
 export const environment = {
-	production: true,
+    production: true,
     serverUrl: 'https://api.chucknorris.io',
     appHostUrl: '',
     defaultLanguage: 'en-US',

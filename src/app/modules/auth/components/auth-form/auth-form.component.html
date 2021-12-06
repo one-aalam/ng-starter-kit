@@ -1,4 +1,4 @@
-<form class="form"  [formGroup]="authForm" (ngSubmit)="handleSubmit($event)">
+<form class="form" [formGroup]="authForm" (ngSubmit)="handleSubmit($event)">
     <fieldset>
         <legend>{{ currActionLabel }}</legend>
         <!-- <button v-if="useGithubAuth" class="flex-1 bg-gray-200 text-green-700 py-3 rounded w-full text-center shadow" @click="$supabase.auth.signIn({ provider: 'github'})">
@@ -7,20 +7,44 @@
         <div class="my-4"></div>
         <div class="form-control">
             <label for="email">Email</label>
-            <input class="input input-bordered text-gray-700" id="email" name="email" type="email" formControlName="email" required placeholder="your email" />
+            <input
+                class="input input-bordered text-gray-700"
+                id="email"
+                name="email"
+                type="email"
+                formControlName="email"
+                required
+                placeholder="your email"
+            />
         </div>
         <div class="my-4"></div>
         <div class="form-control">
             <label for="password">Password</label>
-            <input class="input input-bordered text-gray-700" id="password" name="password" type="password" formControlName="password" required placeholder="Your password." />
+            <input
+                class="input input-bordered text-gray-700"
+                id="password"
+                name="password"
+                type="password"
+                formControlName="password"
+                required
+                placeholder="Your password."
+            />
         </div>
         <div class="my-4"></div>
         <div class="field flex justify-between items-center">
-            <lib-button type="submit" variant="primary" [disabled]="authForm.invalid" [loading]="loading">{{currActionLabel}}</lib-button>
+            <lib-button
+                type="submit"
+                variant="primary"
+                [disabled]="authForm.invalid"
+                [loading]="loading"
+                >{{ currActionLabel }}</lib-button
+            >
 
             <div class="text-right text-gray-700">
                 <small class="block">{{ isSignIn ? 'not a member?' : 'already a member?' }}</small>
-                <a href="" title="Sign Up" (click)="handleChange($event)">{{ isSignIn ? 'Sign Up!' : 'Sign In' }}</a>
+                <a href="" title="Sign Up" (click)="handleChange($event)">{{
+                    isSignIn ? 'Sign Up!' : 'Sign In'
+                }}</a>
             </div>
         </div>
     </fieldset>

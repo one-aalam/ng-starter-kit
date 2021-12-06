@@ -1,1 +1,1 @@
-export * from './services/supabase.service'
+export * from './services/supabase.service';

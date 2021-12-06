@@ -1,6 +1,6 @@
 export type Profile = {
-    id?: string
+    id?: string;
     username: string;
     website: string;
     avatar_url: string;
-}
+};

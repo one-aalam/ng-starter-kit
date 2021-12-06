@@ -5,6 +5,6 @@ export const SEO_CONFIG = {
     imageUrl: '',
     og: {
         twitterCard: 'summary',
-        twitterSite: '@aftabbuddy'
-    }
-}
+        twitterSite: '@aftabbuddy',
+    },
+};
