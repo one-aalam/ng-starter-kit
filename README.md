@@ -60,12 +60,19 @@ The best way to start with this template is to click "Use this template" above, 
 
 To start the project locally, run:
 ```bash
+yarn build:lib
+```
+as a one-time activity to have commonly used UI components available to the main Angular app, and then do a
+```bash
 yarn start
 ```
 which kickstarts the Angular development and build server. Open `http://localhost:4200` with your browser to see the result.
+
 Check `package.json` for the full list of commands available at your disposal.
 
-For building the library(`/projects/commons`), you have `build:lib` for compiling the code. Once compiled, the updated code can pulled by doing a `import { CommonsModule } from 'commons'` which will include all the common components like spinner, avatar, etc. in your module.
+#### Developing the library
+
+For building the library(`/projects/commons`), you have `build:lib` for compiling the code. Once compiled, the updated code can pulled by doing a `import { CommonsModule } from 'commons'` which will include all the common components like spinner, avatar, etc. in your module. The App development server needs to be re-booted, after compilaton to have the updated code available.
 
 ## How to Setup Supabase for Angular Starter Kit?
 If new to Supabase
@@ -119,6 +126,15 @@ create policy "Anyone can upload an avatar."
   on storage.objects for insert
   with check ( bucket_id = 'avatars' );
 ```
+
+### Convenience Imports
+- `@env` - Access the environment files
+- `@app` - Access the code placed inside `/src/app`. Use `/@app/components` to access commonly used app components
+- `@modules` - Access the code placed inside `/src/app/modules`. This lets you to do something like `import { ... } from `@modules/supabase` or `import { ... } from `@modules/auth` to use the functions from the respective modules.
+- `@lib` - Just in case if you think of keeping app-specific libraries under `/src/lib`. However, it's reccomended to place the commonly used, app-wide components, directives, pipes, services, etc. in the `/projects/commons/lib`, expose through `public-api.ts` and use through `import { ... } from `commons`.
+- `commons` - The central place to put all the commonly used code.
+
+
 ## License
 MIT
 
